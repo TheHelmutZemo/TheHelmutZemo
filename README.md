@@ -1,16 +1,28 @@
-### Hi there 👋
+### 🍻 Hey! Nice to see you!
 
-<!--
-**ReshapeThe/ReshapeThe** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<!-- Zero width character is used to put extra blank lines before and after code -->
 
-Here are some ideas to get you started:
+<h1>
+    
+```python
+​
+import json
+from dataclasses import asdict, dataclass
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+@dataclass
+class Stack:
+    languages   : tuple = ("Python", "JS", "Rust")
+    databases   : tuple = ("PostgreSQL", "Mongo", "Redis")
+    misc        : tuple = ("Docker", "ZMQ", "RabbitMQ")
+    ongoing     : tuple = ("FastAPI", "Trio")
+
+    def serialize(self):
+        return json.dumps(asdict(self), indent=4)
+
+
+stack = Stack()
+print(stack.serialize())
+​
+```
+</h1>
