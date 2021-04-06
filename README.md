@@ -2,7 +2,7 @@
 
 <!-- Zero width character is used to put extra blank lines before and after code -->
 
-<h1>
+<h5>
     
 ```python
 ​
@@ -25,4 +25,4 @@ stack = Stack()
 print(stack.serialize())
 ​
 ```
-</h1>
+</h5>
